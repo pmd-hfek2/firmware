@@ -14,6 +14,7 @@ echo "update.bash"
 
 DATE=$(date +"%Y-%m-%d_%H%M")
 
+cd ..
 git status
 git pull origin master
 

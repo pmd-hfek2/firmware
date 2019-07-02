@@ -12,7 +12,7 @@
 echo "............. -PMD HFEK2- .................."
 echo "test.bash"
 
-#sudo python test.py
+sudo python test.py
 
 echo "test.....COMPLETE"
 echo "............................................"

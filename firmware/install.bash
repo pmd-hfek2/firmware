@@ -14,7 +14,7 @@ echo "............. -PMD HFEK2- .................."
 echo "install.bash"
 
 ## call test.bash
-sudo sh firmware/install.bash
+sudo sh firmware/test.bash
 
 echo "install.....COMPLETE"
 echo "............................................"
