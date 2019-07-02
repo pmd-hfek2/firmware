@@ -43,9 +43,9 @@ sudo apt-get install python3
 # GITHUB repos code clone
 echo "load.....GIT code"
 sudo apt-get install git bc 
-#git clone xxxxxxxxxxxx
+git clone https://github.com/pmd-hfek2/firmware.git
 cd firmware
-#git config --global user.name "xxxxxx"
+git config --global user.name "pmd-hfek2"
 
 # Enable firmware
 echo "load......firmware"

@@ -12,8 +12,8 @@
 echo "............. -PMD HFEK2- .................."
 echo "update_auto.bash"
 
-set user "xxxxxxxxxx"
-set password "xxxxxxxxxx"
+set user "pmd-hfek2"
+set password "PMD888dev"
 
 spawn /update.bash
 
