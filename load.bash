@@ -44,11 +44,11 @@ sudo apt-get install python3
 echo "load.....GIT code"
 sudo apt-get install git bc 
 git clone https://github.com/pmd-hfek2/firmware.git
-cd firmware
 git config --global user.name "pmd-hfek2"
 
 # Enable firmware
 echo "load......firmware"
+cd firmware
 sudo chmod +x install.bash
 sudo chmod +x update.bash
 sudo chmod +x update_auto.bash
