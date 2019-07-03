@@ -17,6 +17,11 @@
 echo "............. -PMD HFEK2- .................."
 echo "load.bash"
 
+sudo apt-get update
+sudo apt-get dist-upgrade
+
+sudo apt-get install unzip
+
 # TFT screen configuration
 echo "load.....TFT display - Adafruit 3.5 480x320"
 cd ~
