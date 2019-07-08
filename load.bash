@@ -24,10 +24,12 @@ sudo apt-get install unzip
 
 # TFT screen configuration
 echo "load.....TFT display - Adafruit 3.5 480x320"
-cd ~
 wget https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/adafruit-pitft.sh
 chmod +x adafruit-pitft.sh
 sudo ./adafruit-pitft.sh
+
+sudo apt-get install mplayer
+
 
 # SSH configuration
 echo "load....SSH RealVNC"
@@ -53,7 +55,7 @@ git config --global user.name "pmd-hfek2"
 
 # Enable firmware
 echo "load......firmware"
-cd firmware
+cd firmware/firmware
 sudo chmod +x install.bash
 sudo chmod +x update.bash
 sudo chmod +x update_auto.bash
