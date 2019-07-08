@@ -73,5 +73,5 @@ echo "load.....COMPLETE"
 echo "............................................"
 
 ## call install.bash
-sudo sh firmware/install.bash
+sudo sh firmware/firmware/install.bash
 exit
