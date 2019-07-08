@@ -60,6 +60,14 @@ sudo chmod +x install.bash
 sudo chmod +x update.bash
 sudo chmod +x update_auto.bash
 sudo chmod +x test.bash
+sudo chmod +x reset.bash
+sudo chmod +x shutdown.bash
+
+# Desktop shortcuts
+ln -s /home/pi/firmware/firmware/reset.bash /home/pi/Desktop/
+ln -s /home/pi/firmware/firmware/shutdown.bash /home/pi/Desktop/
+#ln -s /home/pi/firmware/firmware/update.bash /home/pi/Desktop/
+#ln -s /home/pi/firmware/firmware/test.bash /home/pi/Desktop/
 
 # Create Guest user / remove Home access
 cd ~
