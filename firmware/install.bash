@@ -26,7 +26,7 @@ echo "Test"
 sudo evtest /dev/input/touchscreen
 
 ## call test.bash
-sudo sh firmware/test.bash
+sudo sh test.bash
 
 echo "install.....COMPLETE"
 echo "............................................"
