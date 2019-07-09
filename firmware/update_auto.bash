@@ -19,7 +19,7 @@ spawn /update.bash
 
 expect "Username for 'https://github.com':"
 send "$user\r"
-expect "Password for xxxxxxxxxxxxxxx':"
+expect "Password for 'https://pmd-hfek2@github.com':"
 send "$password\r"
 
 expect eof

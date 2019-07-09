@@ -55,6 +55,7 @@ git config --global user.name "pmd-hfek2"
 
 # Enable firmware
 echo "load......firmware"
+sudo apt-get install expect
 cd firmware/firmware
 sudo chmod +x install.bash
 sudo chmod +x update.bash
@@ -62,6 +63,7 @@ sudo chmod +x update_auto.bash
 sudo chmod +x test.bash
 sudo chmod +x reset.bash
 sudo chmod +x shutdown.bash
+sudo chmod +x run.bash
 
 # Desktop shortcuts
 ln -s /home/pi/firmware/firmware/reset.bash /home/pi/Desktop/

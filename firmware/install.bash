@@ -22,8 +22,6 @@ sudo nano /etc/udev/rules.d/95-stmpe.rules
 sudo rmmod stmpe_ts; sudo modprobe stmpe_ts
 ls -l /dev/input/touchscreen
 sudo apt-get install evtest tslib libts-bin
-echo "Test"
-sudo evtest /dev/input/touchscreen
 #sudo TSLIB_FBDEVICE=/dev/fb1 TSLIB_TSDEVICE=/dev/input/touchscreen ts_calibrate
 
 ## call test.bash

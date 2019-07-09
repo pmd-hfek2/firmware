@@ -10,16 +10,8 @@
 #***************************************************#
 
 echo "............. -PMD HFEK2- .................."
-echo "test.bash"
+echo "run.bash"
 
-#TFT screen test
-echo "test....TFT touchscreen"
-lxterminal -e evtest /dev/input/touchscreen
-
-#System test
-sudo python firmware/firmware/test.py
-
-echo "test.....COMPLETE"
-echo "............................................"
+sudo python firmware/firmware/run.py
 
 exit
