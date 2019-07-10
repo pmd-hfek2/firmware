@@ -12,7 +12,7 @@ print("............. -PMD HFEK2- ..................")
 print("test.py")
 
 ### --- IMPORT ---
-
+import mpr121touch
 
 ### --- SYSTEM ---
 
@@ -24,6 +24,8 @@ print("test.py")
 
 
 ### --- RUN ---
+print("test.... MPR121 touchpad")
+mpr121touch.mpr121_test()
 
 print("test.... COMPLETE")
 print(".............................................")

@@ -12,6 +12,7 @@ print("............. -PMD HFEK2- ..................")
 print("run.py")
 
 ### --- IMPORT ---
+import mpr121touch
 
 
 ### --- SYSTEM ---
@@ -24,6 +25,8 @@ print("run.py")
 
 
 ### --- RUN ---
+while True
+	mpr121touch.mpr121_run()
 
 print("run....stopping")
 print("...........................................")
