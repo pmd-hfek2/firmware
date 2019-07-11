@@ -41,11 +41,11 @@ sudo apt-get install realvnc-vnc-viewer
 echo "load....Python3"
 sudo apt-get install python3
 #echo "load....GPIO"
-#sudo apt-get install python-dev python-rpi.gpio
+sudo apt-get install python-dev python-rpi.gpio
 #echo "load....PIP"
-#sudo apt-get install python3-pip
+sudo apt-get install python3-pip
 ##echo "load....SPI"
-#sudo apt-get install python3-spidev python-spidev
+sudo apt-get install python3-spidev python-spidev
 
 # GITHUB repos code clone
 echo "load.....GIT code"

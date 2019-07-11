@@ -13,8 +13,10 @@
 echo "............. -PMD HFEK2- .................."
 echo "install.bash"
 
+cd ~
+
 # TFT touchscreen calibration
-echo "install....Touchscreen"
+echo "install....TFT touchscreen"
 echo "Copy: SUBSYSTEM==\"input\", ATTRS{name}==\"stmpe-ts\", ENV{DEVNAME}==\"*event*\", SYMLINK+=\"input/touchscreen\""
 #SUBSYSTEM=="input", ATTRS{name}=="stmpe-ts", ENV{DEVNAME}=="*event*", SYMLINK+="input/touchscreen" 
 echo "Exit: Ctrl + X ; Y"
@@ -24,7 +26,16 @@ ls -l /dev/input/touchscreen
 sudo apt-get install evtest tslib libts-bin
 #sudo TSLIB_FBDEVICE=/dev/fb1 TSLIB_TSDEVICE=/dev/input/touchscreen ts_calibrate
 
+# MPR121 Adafruit touchpad
+echo "install...MPR121 touchpad"
+sudo pip3 install adafruit-blinka
+sudo pip3 install adafruit-circuitpython-mpr121
+#git clone https://github.com/adafruit/Adafruit_CircuitPython_MPR121.git
+#cd Adafruit_CircuitPython
+#sudo python setup.py
+
 ## call test.bash
+cd firmware/firmware
 sudo sh test.bash
 
 echo "install.....COMPLETE"

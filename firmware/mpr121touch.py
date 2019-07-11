@@ -38,24 +38,24 @@ def mpr121_run():
     for i in range(12):
         if mpr121[i].value:
             print('Input {} touched!'.format(i))
-		
-		touched = mpr121.touched_pins
-		
-		#Reset = Return + PMD
-		if touched[0] and touched[4]	
-			print "*** MPR121: RESET ***"
-			subprocess.call("./reset.bash", shell=True);
-			
-		#Shutdown = Left + Play + Right
-		if touched[1] and touched[2] and touched[5]	
-			print "*** MPR121: SHUTDOWN ***"
-			subprocess.call("./shutodwn.bash", shell=True);
-	
-	time.sleep(0.25)
+    time.sleep(0.25)
+
+    touched = mpr121.touched_pins
+
+    #Reset = Return + PMD
+    if touched[0] and touched[4]:
+        print("*** MPR121: RESET ***")
+        subprocess.call("./reset.bash", shell=True);
+
+    #Shutdown = Left + Play + Right
+    if touched[1] and touched[2] and touched[5]:
+        print("*** MPR121: SHUTDOWN ***")
+        subprocess.call("./shutodwn.bash", shell=True);
+
 
 ### --- TEST/DEBUG ---
-def mpr121_test()
-	print"*** MPR: TEST ***"
+def mpr121_test():
+    print("*** MPR: TEST ***")
     for i in range(12):
         if mpr121[i].value:
             print('Input {} touched!'.format(i))
