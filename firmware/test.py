@@ -13,6 +13,7 @@ print("test.py")
 
 ### --- IMPORT ---
 import mpr121touch
+#import drv2605
 
 ### --- SYSTEM ---
 
@@ -26,6 +27,9 @@ import mpr121touch
 ### --- RUN ---
 print("test.... MPR121 touchpad")
 mpr121touch.mpr121_test()
+
+#print("test.... DRV2605 haptic driver")
+#drv2605.drv_test()
 
 print("test.... COMPLETE")
 print(".............................................")

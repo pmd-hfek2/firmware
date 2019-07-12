@@ -13,6 +13,7 @@ print("run.py")
 
 ### --- IMPORT ---
 import mpr121touch
+#import drv2605
 
 
 ### --- SYSTEM ---

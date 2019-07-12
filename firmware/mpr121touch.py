@@ -15,8 +15,8 @@ print("mpr121touch.py")
 import time
 import board
 import busio
-import adafruit_mpr121
 import subprocess
+import adafruit_mpr121
 
 ### --- SYSTEM ---
 #I2C bus
@@ -37,7 +37,7 @@ mpr121 = adafruit_mpr121.MPR121(i2c)
 def mpr121_run():
     for i in range(12):
         if mpr121[i].value:
-            print('Input {} touched!'.format(i))
+            print('MPR121 touchpad{} touched!'.format(i))
     time.sleep(0.25)
 
     touched = mpr121.touched_pins
@@ -55,7 +55,7 @@ def mpr121_run():
 
 ### --- TEST/DEBUG ---
 def mpr121_test():
-    print("*** MPR: TEST ***")
+    print("*** MPR121: TEST ***")
     for i in range(12):
         if mpr121[i].value:
             print('Input {} touched!'.format(i))
