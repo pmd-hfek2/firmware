@@ -15,7 +15,7 @@ echo "update_auto.bash"
 set user "pmd-hfek2"
 set password "PMD888dev"
 
-spawn /update.bash
+spawn ./update.bash
 
 expect "Username for 'https://github.com':"
 send "$user\r"

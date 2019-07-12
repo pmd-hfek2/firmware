@@ -34,6 +34,13 @@ sudo pip3 install adafruit-circuitpython-mpr121
 #cd Adafruit_CircuitPython
 #sudo python setup.py
 
+
+# DRV2605 haptic driver
+sudo pip3 install adafruit-circuitpython-drv2605
+#git clone https://github.com/adafruit/Adafruit_CircuitPython_DRV2605.git
+#cd Adafruit_CircuitPython
+#sudo python setup.py
+
 ## call test.bash
 cd firmware/firmware
 sudo sh test.bash

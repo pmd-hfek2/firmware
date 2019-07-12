@@ -14,7 +14,7 @@ echo "update.bash"
 
 DATE=$(date +"%Y-%m-%d_%H%M")
 
-cd ..
+cd firmware/firmware
 git status
 git pull origin master
 
