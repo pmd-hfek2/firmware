@@ -41,6 +41,14 @@ sudo pip3 install adafruit-circuitpython-drv2605
 #cd Adafruit_CircuitPython
 #sudo python setup.py
 
+# Python pygame UI (Apps)
+sudo apt-get install python-pygame
+sudo chmod +x installsdl.sh
+sudo ./installsdl.sh
+
+# Desktop shortcup (Apps)
+ln -s /home/pi/firmware/firmware/app/demo_app.py /home/pi/Desktop/
+
 ## call test.bash
 cd firmware/firmware
 sudo sh test.bash

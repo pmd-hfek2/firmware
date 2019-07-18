@@ -16,13 +16,21 @@
 
 echo "............. -PMD HFEK2- .................."
 echo "load.bash"
+cd ~
 
 sudo apt-get update
 sudo apt-get dist-upgrade
 
+#Unzip and move toHFEK2 folder
 sudo apt-get install unzip
+cd Downloads
+unzip toHFEK2.zip -d /home/pi/
+cd ~
+cd toHFEK2
+mv PMD_logo.png PMD_logo2.jpg PMD_logo.png /home/pi/Pictures 
 
 # TFT screen configuration
+cd ~
 echo "load.....TFT display - Adafruit 3.5 480x320"
 wget https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/adafruit-pitft.sh
 chmod +x adafruit-pitft.sh
