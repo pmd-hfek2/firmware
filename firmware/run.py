@@ -13,21 +13,25 @@ print("run.py")
 
 ### --- IMPORT ---
 import mpr121touch
-#import drv2605
+import drv2605
 
 
 ### --- SYSTEM ---
 
 
 ### --- FUNCTION ---
-
+def run():
+   touched = mpr121touch.mpr121_run()
+   if touched[3]:
+       print("touchpad haptic")
+       drv2605.drv_set_run(1,1)
 
 ### --- DEBUG ---
 
 
 ### --- RUN ---
-while True
-	mpr121touch.mpr121_run()
+while True:
+	run()
 
 print("run....stopping")
 print("...........................................")

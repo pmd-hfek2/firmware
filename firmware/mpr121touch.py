@@ -18,6 +18,7 @@ import busio
 import subprocess
 import adafruit_mpr121
 
+
 ### --- SYSTEM ---
 #I2C bus
 i2c = busio.I2C(board.SCL, board.SDA)
@@ -50,8 +51,9 @@ def mpr121_run():
     #Shutdown = Left + Play + Right
     if touched[1] and touched[2] and touched[5]:
         print("*** MPR121: SHUTDOWN ***")
-        subprocess.call("./shutodwn.bash", shell=True);
+        subprocess.call("./shutdown.bash", shell=True);
 
+    return touched
 
 ### --- TEST/DEBUG ---
 def mpr121_test():

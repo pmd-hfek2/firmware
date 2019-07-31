@@ -30,16 +30,16 @@ sudo apt-get install evtest tslib libts-bin
 echo "install...MPR121 touchpad"
 sudo pip3 install adafruit-blinka
 sudo pip3 install adafruit-circuitpython-mpr121
-#git clone https://github.com/adafruit/Adafruit_CircuitPython_MPR121.git
-#cd Adafruit_CircuitPython
-#sudo python setup.py
+git clone https://github.com/adafruit/Adafruit_CircuitPython_MPR121.git
+cd Adafruit_CircuitPython
+sudo python3 setup.py install
 
 
 # DRV2605 haptic driver
 sudo pip3 install adafruit-circuitpython-drv2605
-#git clone https://github.com/adafruit/Adafruit_CircuitPython_DRV2605.git
-#cd Adafruit_CircuitPython
-#sudo python setup.py
+git clone https://github.com/adafruit/Adafruit_CircuitPython_DRV2605.git
+cd Adafruit_CircuitPython
+sudo python3 setup.py
 
 # Python pygame UI (Apps)
 sudo apt-get install python-pygame

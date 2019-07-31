@@ -12,6 +12,6 @@
 echo "............. -PMD HFEK2- .................."
 echo "run.bash"
 
-sudo python firmware/firmware/run.py
+sudo python3 run.py
 
 exit
