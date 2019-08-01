@@ -12,8 +12,7 @@ print("............. -PMD HFEK2- ..................")
 print("run.py")
 
 ### --- IMPORT ---
-import mpr121touch
-import drv2605
+import demo_app.py
 
 
 ### --- SYSTEM ---
@@ -21,10 +20,8 @@ import drv2605
 
 ### --- FUNCTION ---
 def run():
-   touched = mpr121touch.mpr121_run()
-   if touched[3]:
-       print("touchpad haptic")
-       drv2605.drv_set_run(1,1)
+    #touchpad demo app
+    demo_app.run()
 
 ### --- DEBUG ---
 

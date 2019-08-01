@@ -89,3 +89,5 @@ def drv_test():
 
 ### --- RUN ---
 print("DRV2605 - haptic driver")
+#while True:
+#	drv_run()

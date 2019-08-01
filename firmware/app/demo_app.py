@@ -4,11 +4,11 @@
 #- July 2109
 
 #***************************************************#
-#    This script is the PMD HFEK2 Demo App			#
+#    This script runs the touchscreen demo app		#
 #***************************************************#
 
 ### --- TITLE ---
-print("............. -PMD HFEK2- APP ..................")
+print("............. -PMD HFEK2- TOUCHSCREEN DEMO APP ..................")
 print("demo_app.py")
 
 ### --- IMPORT ---
@@ -18,10 +18,14 @@ import pygameui as ui
 import logging
 import RPi.GPIO as GPIO
 
+import sys
+sys.path.insert(1,'/home/pi/firmware/firmware')
+import drv2605 as drv
 
 ## - GPIO setup
 GPIO.setmode(GPIO.BCM)
 #GPIO.setup(4, GPIO.OUT)
+drv.set_motor(1)
 
 ## - Format: console, logger, handler
 log_format = '%(asctime)-6s: %(name)s - %(levelname)s - %(message)s'
@@ -45,13 +49,13 @@ class PiTft(ui.Scene):
     def __init__(self):
         ui.Scene.__init__(self)
 
-    #motor select button
-    self.motor_button = ui.Button(ui.Rect(MARGIN, MARGIN, 130, 90), 'Motor')
+    #Double-click button
+    self.motor_button = ui.Button(ui.Rect(MARGIN, MARGIN, 130, 90), 'DOUBLE')
     self.motor_button.on_clicked.connect(self.gpi_button)
     self.add_child(self.motor_button)
 
-    #PMD DRV2605 button
-    self.pmd_button = ui.Button(ui.Rect(170, MARGIN, 130, 90), 'PMD')
+    #Single-click button
+    self.pmd_button = ui.Button(ui.Rect(170, MARGIN, 130, 90), 'SINGLE')
     self.pmd_button.on_clicked.connect(self.gpi_button)
     self.add_child(self.pmd_button)
 
@@ -65,24 +69,37 @@ class PiTft(ui.Scene):
     self.play_button.on_clicked.connect(self.gpi_button)
     self.add_child(self.play_button)
 
+    #Haptic effects
+	effects = (5,25,35,36)
+	current_effect = effect[0]
+	
     def gpi_button(self, btn, mbtn):
         logger.info(btn.text)
 
-        if btn.text == 'Motor':
-            #GPIO.output(4, False)
-            print("MOTOR")
-        elif btn.text == 'PMD':
-            #GPIO.output(4, False)
-            print("PMD")
+        if btn.text == 'DOUBLE':
+            #print("double click")
+			if current_effect in [5,25,35]:
+			    current_effect = effects[3]
+			elif current_effect in [5,25,36]:
+			    current_effect = effects[2]
+			drv.drv_effect_run(current_effect)
+        elif btn.text == 'SINGLE':
+            #print("single click")
+			if current_effect in [5,35,36]:
+			    current_effect = effects[1]
+			elif current_effect in [25,35,36]:
+			    current_effect = effects[0]
+			drv.drv_effect_run(current_effect)
         elif btn.text == '<--':
-            #GPIO.output(4, False)
-            print("BACK")
+            #print("BACK")
+			drv.drv_effect_run(effects[0])
+			pygame.quit()
         elif btn.text == 'PLAY':
-            #GPIO.output(4, False)
-            print("PLAY")
+            #print("PLAY")
+			drv.drv_effect_run(current_effect)
 
 ## - UI / RUN
-ui.init('PMD HFEK2 Demo', (320, 240))
+ui.init('PMD HFEK2 Touchscreen Demo', (320, 240))
 pygame.mouse.set_visible(False)
 ui.scene.push(PiTft())
 ui.run()

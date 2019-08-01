@@ -32,7 +32,7 @@ mpr121 = adafruit_mpr121.MPR121(i2c)
 #[2] : Play
 #[3] : Select
 #[4] : PMD
-#[0] : Right
+#[5] : Right
 
 ### --- FUNCTION ---
 def mpr121_run():
@@ -65,5 +65,5 @@ def mpr121_test():
 ### --- RUN ---
 print("MPR121 - touchpad")
 
-while True:
-	mpr121_run()
+#while True:
+#	mpr121_run()
