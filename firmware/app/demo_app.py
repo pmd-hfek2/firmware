@@ -35,7 +35,7 @@ logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 logger.addHandler(console_handler)
 
-## - Format: OS, mouse, touchscreen 
+## - Format: OS, mouse, touchscreen
 os.putenv('SDL_FBDEV', '/dev/fb1')
 os.putenv('SDL_MOUSEDRV', 'TSLIB')
 os.putenv('SDL_MOUSEDEV', '/dev/input/touchscreen')
@@ -70,33 +70,33 @@ class PiTft(ui.Scene):
     self.add_child(self.play_button)
 
     #Haptic effects
-	effects = (5,25,35,36)
-	current_effect = effect[0]
-	
+    effects = (5,25,35,36)
+    current_effect = effect[0]
+
     def gpi_button(self, btn, mbtn):
         logger.info(btn.text)
 
         if btn.text == 'DOUBLE':
             #print("double click")
-			if current_effect in [5,25,35]:
-			    current_effect = effects[3]
-			elif current_effect in [5,25,36]:
-			    current_effect = effects[2]
-			drv.drv_effect_run(current_effect)
+            if current_effect in [5,25,35]:
+                current_effect = effects[3]
+            elif current_effect in [5,25,36]:
+                 current_effect = effects[2]
+            drv.drv_effect_run(current_effect)
         elif btn.text == 'SINGLE':
             #print("single click")
-			if current_effect in [5,35,36]:
-			    current_effect = effects[1]
-			elif current_effect in [25,35,36]:
-			    current_effect = effects[0]
-			drv.drv_effect_run(current_effect)
+            if current_effect in [5,35,36]:
+                current_effect = effects[1]
+            elif current_effect in [25,35,36]:
+                current_effect = effects[0]
+            drv.drv_effect_run(current_effect)
         elif btn.text == '<--':
             #print("BACK")
-			drv.drv_effect_run(effects[0])
-			pygame.quit()
+            drv.drv_effect_run(effects[0])
+            pygame.quit()
         elif btn.text == 'PLAY':
             #print("PLAY")
-			drv.drv_effect_run(current_effect)
+            drv.drv_effect_run(current_effect)
 
 ## - UI / RUN
 ui.init('PMD HFEK2 Touchscreen Demo', (320, 240))

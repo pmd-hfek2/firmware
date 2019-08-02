@@ -25,28 +25,28 @@ def run():
 
     #single click/strong, double click/strong
     effects = (5,25,35,36)
-	current_effect
-   
+    current_effect
+
     #PLAY or SELECT buttons
     if touched[2] or touched[3]:
         #play current effect
-		if current_effect not in [5,25,35,36]:
-		    current_effect = effects[0]
-		drv.drv_effect_run(current_effect)
-	  
-    #PMD button	  
-	if touched[4]
-	    #vary effect + play effect
-		if current_effect == effects[0]:
-		    current_effect == effects[1]
-		elif current_effect == effects[1]:
-		    current_effect == effects[2]
-		elif current_effect == effects[2]:
-		    current_effect == effects[3]
-		elif current_effect == effects[3]:
-		    current_effect == effects[0]
-		drv.drv_effect_run(current_effect)
-		    
+        if current_effect not in (5,25,35,36):
+            current_effect = effects[0]
+        drv.drv_effect_run(current_effect)
+
+    #PMD button
+    if touched[4]:
+        #vary effect + play effect
+        if current_effect == effects[0]:
+            current_effect == effects[1]
+        elif current_effect == effects[1]:
+            current_effect == effects[2]
+        elif current_effect == effects[2]:
+            current_effect == effects[3]
+        elif current_effect == effects[3]:
+            current_effect == effects[0]
+        drv.drv_effect_run(current_effect)
+
 ### --- DEBUG ---
 
 
