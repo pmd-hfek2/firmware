@@ -1,34 +1,31 @@
 #*** Precision Microdrives [PMD] ***
 #* Haptic Feedback Evaluation Kit 2.0 [HFEK2]
 #- Tristan Cool
-#- July 2019
+#- August 2019
 
 #***************************************************#
-#    This script is the master system run           #
+#    This script runs at boot. System start.        #
 #***************************************************#
 
 ### --- TITLE ---
 print("............. -PMD HFEK2- ..................")
-print("run.py")
+print("start.py")
 
 ### --- IMPORT ---
-import demo_app.py
+import drv2605 as drv
 
 
 ### --- SYSTEM ---
-
+#DRV2605 activate pulse
+drv.set_motor(1) #LRA
+drv.drv_effect_run(5) #click
 
 ### --- FUNCTION ---
-def run():
-    #touchpad demo app
-    demo_app.run()
+
 
 ### --- DEBUG ---
 
 
 ### --- RUN ---
-while True:
-	run()
 
-print("run....stopping")
 print("...........................................")
