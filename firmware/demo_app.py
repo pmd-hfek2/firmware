@@ -9,7 +9,7 @@
 
 ### --- TITLE ---
 print("............. -PMD HFEK2- TOUCHPAD DEMO APP ..................")
-print("run.py")
+print("demo_app.py")
 
 ### --- IMPORT ---
 import mpr121touch as mpr

@@ -14,7 +14,7 @@ print("demo_app.py")
 ### --- IMPORT ---
 import pygame
 import os
-import pygameui as ui
+#import pygameui as ui
 import logging
 import RPi.GPIO as GPIO
 
@@ -22,10 +22,13 @@ import sys
 sys.path.insert(1,'/home/pi/firmware/firmware')
 import drv2605 as drv
 
+sys.path.insert(1,'/home/pi/pygameui')
+import pygameui as ui
+
 ## - GPIO setup
 GPIO.setmode(GPIO.BCM)
 #GPIO.setup(4, GPIO.OUT)
-drv.set_motor(1)
+drv.drv_set_motor(1)
 
 ## - Format: console, logger, handler
 log_format = '%(asctime)-6s: %(name)s - %(levelname)s - %(message)s'
