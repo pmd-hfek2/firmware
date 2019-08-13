@@ -17,7 +17,7 @@ import drv2605 as drv
 
 ### --- SYSTEM ---
 #DRV2605 activate pulse
-drv.set_motor(1) #LRA
+drv.drv_set_motor(1) #LRA
 drv.drv_effect_run(5) #click
 
 ### --- FUNCTION ---

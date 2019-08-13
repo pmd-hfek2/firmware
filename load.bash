@@ -72,6 +72,7 @@ sudo chmod +x test.bash
 sudo chmod +x reset.bash
 sudo chmod +x shutdown.bash
 sudo chmod +x run.bash
+sudo chmod +x start.bash
 
 # Desktop shortcuts
 ln -s /home/pi/firmware/firmware/reset.bash /home/pi/Desktop/
