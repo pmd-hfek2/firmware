@@ -8,7 +8,7 @@
 #***************************************************#
 
 ### --- TITLE ---
-print("............. -PMD HFEK2- TOUCHPAD DEMO APP ..................")
+print("............. -PMD HFEK2- TOUCHPAD DEMO APP_0 (TOUCH) ..................")
 print("demo_app.py")
 
 ### --- IMPORT ---
@@ -16,6 +16,7 @@ import mpr121touch as mpr
 import drv2605 as drv
 
 ### --- SYSTEM ---
+## - DRV2605 haptic
 drv.set_motor(1) #LRA
 
 ### --- FUNCTION ---

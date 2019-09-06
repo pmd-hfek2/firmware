@@ -3,12 +3,12 @@
 #- Tristan Cool
 #- July 2019
 
-#***************************************************#
-#    This script runs the touchscreen demo app		#
-#***************************************************#
+#********************************************************#
+#    This script runs the touchscreen-click demo app	 #
+#********************************************************#
 
 ### --- TITLE ---
-print("............. -PMD HFEK2- TOUCHSCREEN DEMO APP ..................")
+print("............. -PMD HFEK2- TOUCHSCREEN DEMO APP_1 (CLICK) ..................")
 print("demo_app.py")
 
 ### --- IMPORT ---
@@ -25,9 +25,12 @@ import drv2605 as drv
 sys.path.insert(1,'/home/pi/pygameui')
 import pygameui as ui
 
+### --- SYSTEM ---
 ## - GPIO setup
 GPIO.setmode(GPIO.BCM)
 #GPIO.setup(4, GPIO.OUT)
+
+## - DRV2605 haptic 
 drv.drv_set_motor(1)
 
 ## - Format: console, logger, handler
@@ -43,9 +46,8 @@ os.putenv('SDL_FBDEV', '/dev/fb1')
 os.putenv('SDL_MOUSEDRV', 'TSLIB')
 os.putenv('SDL_MOUSEDEV', '/dev/input/touchscreen')
 
-### --- BACKGROUND ---
+### --- GUI ---
 MARGIN = 20
-
 
 ### --- CLASS ---
 class PiTft(ui.Scene):
